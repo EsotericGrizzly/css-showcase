@@ -1,0 +1,90 @@
+firstsec  
+  position: relative
+  display: block
+  width: 100%
+  height: 100vh
+  background: radial-gradient(#333, #000)
+  color: white  
+  text-align: center
+  justify-content: center
+  overflow: hidden
+
+  .heading
+    position: absolute
+    margin: auto
+    width: 100%
+    padding-top: 30vh
+    h1
+      font-size: 8vh
+    h2
+      font-size: 6vh
+  img        
+    height: 10vw
+    width: auto
+
+@mixin customizeLeaf ($left, $duration, $delay)
+  position: absolute
+  display: block
+  left: $left
+  animation: falling $duration linear infinite
+  animation-delay: $delay
+  
+  
+
+.set
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  div:nth-child(1)
+    @include customizeLeaf (50%, 15s, 0s)    
+  div:nth-child(2)
+    @include customizeLeaf (30%, 20s, -2s)
+  div:nth-child(3)
+    @include customizeLeaf (70%, 25s, -4s)
+  div:nth-child(4)
+    @include customizeLeaf (0%, 15s, -5s)
+  div:nth-child(5)
+    @include customizeLeaf (85%, 18s, -10s)
+  div:nth-child(6)
+    @include customizeLeaf (0%, 12s, -4s)
+  div:nth-child(7)
+    @include customizeLeaf (45%, 15s, -10s)
+  div:nth-child(8)
+    @include customizeLeaf (65%, 20s, -7s)
+
+.set2 
+    transform: scale(2) rotateY(180deg)
+    filter: blur(2px)
+  
+
+.set3 
+    transform: scale(0.8) rotateX(180deg)
+    filter: blur(4px)  
+  
+
+@keyframes falling
+  0%
+    opacity: 0
+    top: -10%
+    transform: translateX(20px) rotate(0deg)
+
+  10%
+    opacity: 1
+
+  20%
+    transform: translateX(-20px) rotate(45deg)
+
+  40%
+    transform: translateX(20px) rotate(90deg)
+
+  60%
+    transform: translateX(-20px) rotate(135deg)
+
+  80%
+    transform: translateX(20px) rotate(180deg)
+
+  100%
+    top: 110%
+    transform: translateX(-20px) rotate(225deg)

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS showcase</title>
+    <link rel="stylesheet" href="styles/styles.css">    
+</head>
+<body>
+    <firstsec>
+        <div class="heading">
+            <h1>Michael Neumann</h1>
+            <h2>CSS Showcase</h2>
+        </div>
+        
+        <div class="set">            
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>
+         </div>
+         <div class="set set2">            
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>
+         </div>
+         <div class="set set3">            
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>
+            <div><img src="img/leaves/bigred.png"></div>
+            <div><img src="img/leaves/brownbig.png"></div>
+            <div><img src="img/leaves/brownsmall.png"></div>
+            <div><img src="img/leaves/redpointy.png"></div>         
+        </div>
+    </firstsec>
+
+    <changing-text>
+        <h2 id="ch-text">Be
+            <span style="display: inline">Bold</span>
+            <span>Creative</span>
+            <span>Amazing</span>
+            <span>Unique</span>
+            <span>Cool</span>
+            <span>Awesome</span>
+        </h2>        
+        <script type="text/javascript">
+            let text = document.getElementById('ch-text');
+            let word = text.getElementsByTagName('span');
+        
+            let i = 0;
+        
+            function rotator(){
+                word[i].style.display = 'none';
+                i = (i + 1) % word.length;
+                word[i].style.display = 'initial'
+            }
+            setInterval(rotator, 800);        
+        </script>
+    </changing-text>
+
+    <glowing-button>
+        <div class="button-container">
+            <a href="" class="button1">Mouse over me!</a>            
+            <a href="" class="button2">Mouse over me!</a>                                 
+        </div>
+    </glowing-button>
+
+    <blackwhite>
+        <div class="mouse"></div>
+            <section>
+                <h1>Black <br/> &<br/> White</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem doloribus dolorem dicta ducimus recusandae, o
+                    bcaecati explicabo culpa laborum ad voluptas. Minima eum dolores, error tempora ipsa dolorum ut eligendi eaque!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta voluptatibus, quisquam obcaecati eum aliquam, at provident aperiam dignissimos 
+                    vel incidunt quis atque perferendis aliquid reiciendis, quas magnam velit veritatis blanditiis!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi non fugiat saepe nostrum pariatur? Libero accusamus accusan
+                    tium velit ipsum dolor sit, amet consectetur adipisicing elit. Dicta voluptatibus, quisquam obcaecati eum aliquam, at provident aperiam dignissimos 
+                    vel incidunt quis atque perferendis aliquid reiciendis, quas magnam velit veritatis blanditiis!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi non fugiat saepe nostrum pariatur? Libero accusamus accusan
+                    tium velit 
+                </p>                
+            </section>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>
+            $('blackwhite').mousemove((e) => {
+                $('.mouse').css({left:e.pageX, top:e.pageY - 1780})
+            })
+        </script>
+    </blackwhite>
+
+</body>
+
+</html>
