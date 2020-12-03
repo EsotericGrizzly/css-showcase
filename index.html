@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS showcase</title>
+    <title>CSS Showcase</title>
     <link rel="stylesheet" href="styles/styles.css">    
 </head>
 <body>
@@ -96,8 +96,7 @@
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script>
             $('blackwhite').mousemove((e) => {
-                $('.mouse').css({left:e.pageX, top:e.pageY - $('.mouse').offset().top})
-                console.log($('.mouse').offset().top)
+                $('.mouse').css({left:e.pageX, top:e.pageY - $('blackwhite').offset().top});
             })
         </script>
     </blackwhite>
