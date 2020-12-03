@@ -77,7 +77,7 @@
     </glowing-button>
 
     <blackwhite>
-        <div class="mouse"></div>
+        <div class="mouse" id='mouse'></div>
             <section>
                 <h1>Black <br/> &<br/> White</h1>
                 <p>
@@ -96,7 +96,8 @@
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script>
             $('blackwhite').mousemove((e) => {
-                $('.mouse').css({left:e.pageX, top:e.pageY - 1780})
+                $('.mouse').css({left:e.pageX, top:e.pageY - $('.mouse').offset().top})
+                console.log($('#mouse').offset().top)
             })
         </script>
     </blackwhite>
